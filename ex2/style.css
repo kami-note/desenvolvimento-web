@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", serif;
+    text-transform: uppercase;
+}
+
+body {
+    overflow: hidden;
+    background: black;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    filter: blur(0.1);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.align-center {
+    align-items: center;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.titulo {
+    width: 100%;
+    max-width: 822px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.result {
+    width: 100%;
+    height: auto;
+    font-size: 32pt;
+}
+
+form {
+    background-image: url("images/background_menu.png");
+    background-size: 62%;
+    image-rendering: pixelated;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+input[type="number"], input[type="button"] {
+    width: 40%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    font-size: 16px;
+}
+.btn-calculator{
+    margin-top: 10px;
+}
+
+.radio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-container input {
+    display: none;
+}
+
+.radio-container label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url('images/radio-unchecked.png') no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.radio-container input:checked + label {
+    background-image: url('images/radio-checked.png');
+}
+
+.radio-option span {
+    font-size: 18px;
+    color: white;
+}

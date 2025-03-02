@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de peso Ideal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<canvas id="fireCanvas"></canvas>
+
+<div class="container">
+  <button id="playButton">Click para uma experiência completa</button>
+  <form name="calculadora">
+    <img class="titulo" src="images/doom-nightmare-calcule-seu-peso-ideal.png" alt="Calculadora de Peso Ideal">
+    <div class="radio-container">
+      <p class="pixelated-text">Selecione o seu gênero:</p>
+      <div>
+        <div class="radio-option">
+          <input type="radio" id="masculino" name="genero" value="masculino" checked>
+          <label for="masculino"></label>
+          <span>Masculino</span>
+        </div>
+
+        <div class="radio-option">
+          <input type="radio" id="feminino" name="genero" value="feminino">
+          <label for="feminino"></label>
+          <span>Feminino</span>
+        </div>
+      </div>
+    </div>
+    <div class="column align-center">
+      <p>Digite a sua altura: (CM)</p>
+      <label for="altura"></label><input type="number" name="altura" id="altura" required>
+      <img class="btn-calculator" src="images/doom-nightmare-calcular.png" onclick="calculate()" alt="Calcular button">
+      <p class="result" id="resultado"></p>
+    </div>
+  </form>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
